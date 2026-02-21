@@ -4,7 +4,10 @@ import OpenAI from "openai";
 import { SYSTEM_PROMPT } from "./prompt.js";
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:3000", "https://*.vercel.app"],
+  credentials: true
+}));
 app.use(express.json());
 
 const client = new OpenAI({
