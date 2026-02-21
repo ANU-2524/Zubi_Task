@@ -80,6 +80,7 @@ const App: React.FC = () => {
       SpeechRecognition.stopListening();
       window.speechSynthesis.cancel();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
